@@ -1,0 +1,286 @@
+/*--------------------------------------------------
+		Sign in/up
+------------------------------------*/
+.header .topbar {
+	z-index: 12;
+	padding: 8px 0;
+	position: relative;
+}
+
+@media (max-width: 991px) {
+	.header .topbar {
+		margin-bottom: 20px;
+	}
+}
+
+.header .topbar ul.loginbar {
+	margin: 0;
+}
+
+.header .topbar ul.loginbar > li {
+	display: inline;
+	list-style: none;
+	position: relative;
+	padding-bottom: 15px;
+}
+
+.header .topbar ul.loginbar > li > a,
+.header .topbar ul.loginbar > li > a:hover {
+	color: #7c8082;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.header .topbar ul.loginbar li i.fa {
+	color: #bbb;
+}
+
+.header .topbar ul.loginbar li.topbar-devider {
+	top: -1px;
+	padding: 0;
+	font-size: 8px;
+	position: relative;
+	margin: 0 9px 0 5px;
+	font-family: Tahoma;
+	border-right: solid 1px #bbb;
+}
+
+
+/*--------------------------------------------------
+    Navbar
+----------------------------------------------------*/
+
+/*Navbar*/
+.header {
+	z-index: 99;
+	background: #fff;
+	position: relative;
+	border-bottom: solid 2px #eee;
+}
+
+/*Header Container*/
+.header > .container {
+	display: table;
+	margin-bottom: -40px;
+}
+
+@media (max-width: 768px) {
+	.header > .container {
+		width: 100%;
+	}
+}
+
+@media (max-width: 991px) {
+	.header > .container {
+		margin-bottom: 0;
+	}
+}
+
+/*Logo*/
+.header .logo {
+	height: 100%;
+	width: 100px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.header .logo img {
+	z-index: 1;
+	margin: 20px 0;
+	position: relative;
+}
+
+/*Navbar Toggle*/
+.header .navbar-toggle {
+	border-color: #1abc9c;
+}
+
+@media (max-width: 991px) {
+	.header .navbar-toggle {
+		margin-right: 0;
+	}
+}
+
+.header .navbar-toggle .fa {
+	color: #fff;
+	font-size: 19px;
+}
+
+.header .navbar-toggle,
+.header .navbar-toggle:hover,
+.header .navbar-toggle:focus {
+	background: #1abc9c;
+	padding: 6px 10px 2px;
+}
+
+.header .navbar-toggle:hover {
+	background: #16a085 !important;
+}
+
+/*Navbar Collapse*/
+.header .navbar-collapse {
+	position: relative;
+}
+
+/*Navbar Menu*/
+.header .navbar-nav > li > a {
+	color: #687074;
+	font-size: 15px;
+	font-weight:400;
+	text-transform: uppercase;
+}
+
+.header .navbar-nav > .active > a {
+	color: #1abc9c;
+}
+
+@media (min-width: 992px) {
+	.header .navbar-nav {
+		float: right;
+	}
+}
+
+/*No Topbar*/
+.header.no-topbar .navbar-toggle {
+	margin-top: 25px;
+}
+
+@media (min-width: 992px) {
+	.header.no-topbar .navbar-nav {
+		padding-top: 36px;
+	}
+}
+
+/*Navbar Collapse*/
+@media (max-width: 991px) {
+  	.header .navbar-collapse,
+	.header .navbar-collapse .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/*--------------------------------------------------
+    Responsive Navbar Style
+----------------------------------------------------*/
+
+/*Responsive Navbar*/
+@media (max-width: 991px) {
+	/*Responsive code for max-width: 991px*/
+    .header .navbar-header {
+        float: none;
+    }
+
+    .header .navbar-toggle {
+        display: block;
+    }
+
+    .header .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .header .navbar-collapse.collapse.in {
+        display: block !important;
+  		overflow-y: auto !important;
+    }
+
+    .header .navbar-nav {
+        margin: 0 0 5px;
+        float: none !important;
+    }
+
+    .header .navbar-nav > li {
+        float: none;
+    }
+
+    .header .navbar-nav > li > a {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    /*Pull Right*/
+    .header .dropdown-menu.pull-right {
+		float: none !important;
+	}
+
+	/*Design for max-width: 991px*/
+	.header .navbar-nav > li > a {
+		font-size: 14px;
+		padding: 9px 10px;
+	}
+
+	.header .navbar-nav > li a {
+		border-bottom: solid 1px #eee;
+	}
+
+	.header .navbar-nav > li > a:focus {
+		background: none;
+	}
+
+	.header .navbar-nav > li > a:hover {
+		color: #1abc9c;
+	}
+
+	.header .navbar-nav > .active > a,
+	.header .navbar-nav > .active > a:hover,
+	.header .navbar-nav > .active > a:focus {
+		background: #1abc9c;
+		color: #fff !important;
+	}
+}
+
+@media (min-width: 992px) {
+	/*Navbar Collapse*/
+	.header .navbar-collapse {
+		padding: 0;
+	}
+
+	/*Navbar*/
+	.header .container > .navbar-header,
+	.header .container-fluid > .navbar-header,
+	.header .container > .navbar-collapse,
+	.header .container-fluid > .navbar-collapse {
+		margin-bottom: -10px;
+	}
+
+	.header .navbar-nav {
+		position: relative;
+	}
+
+	.header .navbar-nav > li > a {
+		bottom: -2px;
+		position: relative;
+		padding: 9px 30px 9px 20px;
+	}
+
+	.header .navbar-nav > li > a,
+	.header .navbar-nav > li > a:focus {
+		border-bottom: solid 2px transparent;
+	}
+
+	.header .navbar-nav > li > a:hover,
+	.header .navbar-nav > .active > a {
+		bottom: -2px;
+		position: relative;
+		border-bottom: solid 2px #1abc9c;
+	}
+
+	.header .navbar-nav > li > a,
+	.header .navbar-nav > li > a:hover,
+	.header .navbar-nav > li > a:focus,
+	.header .navbar-nav > .active > a,
+	.header .navbar-nav > .active > a:hover,
+	.header .navbar-nav > .active > a:focus {
+		background: none;
+	}
+
+	.header .navbar-nav > .open > a,
+	.header .navbar-nav > .open > a:hover,
+	.header .navbar-nav > .open > a:focus {
+		color: #1abc9c;
+	}
+
+	.header .navbar-nav > li:hover > a {
+        color: #1abc9c;
+    }
+}
