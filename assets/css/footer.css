@@ -1,0 +1,37 @@
+/*--------------------------------------------------
+		Footer
+------------------------------------*/
+.footer {
+	background: #222;
+	border-top: none;
+	padding: 10px 0 5px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.footer p {
+	color: #eee;
+	margin-top: 14px;
+}
+
+.footer a {
+	margin: 0 2px;
+}
+
+.footer-socials {
+	margin-top: 12px;
+	text-align: right;
+}
+
+.footer-socials li a {
+	color: #777;
+	font-size: 16px;
+}
+
+@media (max-width: 991px) {
+	.footer,
+	.footer-socials {
+		text-align: left;
+	}
+}
