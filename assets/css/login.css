@@ -1,5 +1,5 @@
 /*--------------------------------------------------
-    Login Form
+    Login/Register Form
 ------------------------------------*/
 body{
   background: url(../img/books.jpg) no-repeat center center fixed;
@@ -9,7 +9,7 @@ body{
   background-size: cover;
 }
 
-.login-container{
+.login-container, .register-container{
   position: relative;
   width: 300px;
   margin: 80px auto;
@@ -19,8 +19,10 @@ body{
   border: 1px solid #ccc;
 }
 
+.register-container{width:600px;}
 
-.login-container::before,.login-container::after{
+.login-container::before,.login-container::after,
+.register-container::before,.register-container::after{
   content: "";
   position: absolute;
   width: 100%;height: 100%;
@@ -31,16 +33,15 @@ body{
   -moz-transform: rotateZ(4deg);
   -ms-transform: rotateZ(4deg);
   border: 1px solid #ccc;
-
 }
 
-.login-container::after{
+.login-container::after,
+.register-container::after{
   top: 5px;
   z-index: -2;
   -webkit-transform: rotateZ(-2deg);
   -moz-transform: rotateZ(-2deg);
   -ms-transform: rotateZ(-2deg);
-
 }
 
 .avatar{
@@ -48,7 +49,8 @@ body{
   margin: 10px auto 30px;
 }
 
-.form-box input{
+.login-form-box input,
+.register-form-box input{
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -56,25 +58,30 @@ body{
   border: 1px solid #ccc;;
   background: #fafafa;
   transition:0.2s ease-in-out;
-
 }
 
-.form-box input:focus{
+.login-form-box input:focus,
+.register-form-box input:focus{
   outline: 0;
   background: #eee;
 }
 
-.form-box input[type="text"]{
+.login-form-box input[type="text"]{
   border-radius: 5px 5px 0 0;
   text-transform: lowercase;
 }
 
-.form-box input[type="password"]{
+.login-form-box input[type="password"]{
   border-radius: 0 0 5px 5px;
   border-top: 0;
 }
 
-.form-box button.login{
+.register-form-box input{
+  border-radius: 5px 5px 5px 5px;
+}
+
+.login-form-box button.login,
+.regster-form-box button.register{
   margin-top:15px;
   padding: 10px 20px;
 }

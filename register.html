@@ -63,13 +63,36 @@
     <!-- End Header -->
 
     <div class="container" id="content">
-      <div class="login-container">
-        <div class="avatar"><img class="avatar" src="assets/img/person.png" alt="Divasma"></div>
-        <div class="login-form-box">
+      <div class="register-container">
+        <h2>Registration</h2>
+        <div class="register-form-box">
           <form action="" method="">
-            <input name="user" type="text" placeholder="username">
-            <input type="password" placeholder="password">
-            <button class="btn btn-info btn-block login" type="submit">Login</button>
+            <div class="form-group col-lg-12">
+              <label for="username">Username</label>
+              <input type="text" name="username" id="username">
+            </div>
+
+            <div class="form-group col-lg-6">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password">
+            </div>
+
+            <div class="form-group col-lg-6">
+              <label for="repeat_password">Repeat Password</label>
+              <input type="password" name="repeat_password" id="repeat_password">
+            </div>
+
+            <div class="form-group col-lg-6">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" id="email">
+            </div>
+
+            <div class="form-group col-lg-6">
+              <label for="repeat_email">Repeat Email Address</label>
+              <input type="email" name="repeat_email" id="repeat_email">
+            </div>
+            
+            <button class="btn btn-info btn-block register" type="submit">Create an account</button>
           </form>
         </div>
       </div>
