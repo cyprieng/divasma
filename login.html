@@ -68,9 +68,9 @@
       <div class="login-container">
         <div class="avatar"><img class="avatar" src="assets/img/person.png" alt="Divasma"></div>
         <div class="login-form-box">
-          <form action="" method="">
-            <input name="user" type="text" placeholder="username">
-            <input type="password" placeholder="password">
+          <form action="" method="" onsubmit="return validateLogin();">
+            <input name="user" type="text" id="user" placeholder="username">
+            <input type="password" id="password" placeholder="password">
             <button class="btn btn-info btn-block login" type="submit">Login</button>
           </form>
         </div>
@@ -113,5 +113,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/divasma.js"></script>
+    <script src="assets/js/form_validator.js"></script>
   </body>
 </html>

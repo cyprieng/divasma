@@ -19,6 +19,7 @@ a:hover {
   left:50%;
   margin-left: -150px;
   color: #fff;
+  z-index: 999;
 }
 
 #notification.alert-success{
@@ -57,7 +58,7 @@ a:hover {
     -ms-transform: translateY(20px);
     transform: translateY(20px);
   }
-  
+
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
