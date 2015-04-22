@@ -1,6 +1,11 @@
 /*--------------------------------------------------
 		Base elements
 ------------------------------------*/
+html,
+body {
+  height: 100%;
+}
+
 a {
   color: #1abc9c;
 }
@@ -70,4 +75,60 @@ a:hover {
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
+
+/*--------------------------------------------------
+    Breadcrumbs
+------------------------------------*/
+.breadcrumbs {
+  overflow: hidden;
+  padding: 10px 0 6px;
+  border-bottom: solid 1px #eee;
+  background-color: #fcfcfc;
+}
+
+.breadcrumbs h1 {
+  color: #666;
+  font-size: 22px;
+  margin-top: 8px;
+}
+
+.breadcrumb {
+  top: 10px;
+  padding-right: 0;
+  background: none;
+  position: relative;
+}
+.breadcrumb a {
+  color: #777;
+}
+.breadcrumb li.active,
+.breadcrumb li a:hover {
+  color: #72c02c;
+  text-decoration: none;
+}
+
+@media (max-width: 550px) {
+  .breadcrumbs h1.pull-left,
+  .breadcrumbs ul.pull-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .breadcrumbs h1.pull-left {
+    margin-bottom: 0;
+  }
+
+  .breadcrumbs .breadcrumb {
+    top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/*--------------------------------------------------
+		Content
+------------------------------------*/
+#content{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

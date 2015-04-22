@@ -18,86 +18,89 @@
     <link rel="stylesheet" href="assets/css/login.css">
   </head>
   <body>
-
-    <!-- Header -->
-    <div class="header">
-      <div class="container">
-        <!-- Logo -->
-        <a class="logo" href="index.html">
-          <img src="assets/img/logo.png" alt="Divasma">
-        </a>
-
-        <!-- Sign in/up -->
-        <div class="topbar">
-          <ul class="loginbar pull-right">
-            <li><a href="#">Sign up</a></li>
-            <li class="topbar-devider"></li>
-            <li><a href="#">Sign in</a></li>
-          </ul>
-        </div>
-
-        <!-- Toggle button -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="fa fa-bars"></span>
-        </button>
-      </div>
-
-      <!-- Navbar -->
-      <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+    <div id="wrap">
+      <!-- Header -->
+      <div class="header">
         <div class="container">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Your Books</a>
-            </li>
-            <li>
-              <a href="#">Add a Book</a>
-            </li>
-          </ul>
+          <!-- Logo -->
+          <a class="logo" href="index.html">
+            <img src="assets/img/logo.png" alt="Divasma">
+          </a>
+
+          <!-- Sign in/up -->
+          <div class="topbar">
+            <ul class="loginbar pull-right">
+              <li><a href="#">Sign up</a></li>
+              <li class="topbar-devider"></li>
+              <li><a href="#">Sign in</a></li>
+            </ul>
+          </div>
+
+          <!-- Toggle button -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-bars"></span>
+          </button>
+        </div>
+
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+          <div class="container">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Your Books</a>
+              </li>
+              <li>
+                <a href="#">Add a Book</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- End Header -->
+      <!-- End Header -->
 
-    <div id="notification"></div>
+      <div id="notification"></div>
 
-    <div class="container" id="content">
-      <div class="register-container">
-        <h2>Registration</h2>
-        <div class="register-form-box">
-          <form action="" method="" id="register" onsubmit="return validateRegister();">
-            <div class="form-group col-lg-12">
-              <label for="username">Username</label>
-              <input type="text" name="username" id="username">
-            </div>
+      <div class="container" id="content">
+        <div class="register-container">
+          <h2>Registration</h2>
+          <div class="register-form-box">
+            <form action="" method="" id="register" onsubmit="return validateRegister();">
+              <div class="form-group col-lg-12">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username">
+              </div>
 
-            <div class="form-group col-lg-6">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password">
-            </div>
+              <div class="form-group col-lg-6">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+              </div>
 
-            <div class="form-group col-lg-6">
-              <label for="repeat_password">Repeat Password</label>
-              <input type="password" name="repeat_password" id="repeat_password">
-            </div>
+              <div class="form-group col-lg-6">
+                <label for="repeat_password">Repeat Password</label>
+                <input type="password" name="repeat_password" id="repeat_password">
+              </div>
 
-            <div class="form-group col-lg-6">
-              <label for="email">Email Address</label>
-              <input type="email" name="email" id="email">
-            </div>
+              <div class="form-group col-lg-6">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email">
+              </div>
 
-            <div class="form-group col-lg-6">
-              <label for="repeat_email">Repeat Email Address</label>
-              <input type="email" name="repeat_email" id="repeat_email">
-            </div>
+              <div class="form-group col-lg-6">
+                <label for="repeat_email">Repeat Email Address</label>
+                <input type="email" name="repeat_email" id="repeat_email">
+              </div>
 
-            <button class="btn btn-info btn-block register" type="submit">Create an account</button>
-          </form>
+              <button class="btn btn-info btn-block register" type="submit">Create an account</button>
+            </form>
+          </div>
         </div>
       </div>
+
+      <div id="push"></div>
     </div>
 
     <!-- Footer -->

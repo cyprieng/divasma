@@ -18,63 +18,66 @@
     <link rel="stylesheet" href="assets/css/login.css">
   </head>
   <body>
-
-    <!-- Header -->
-    <div class="header">
-      <div class="container">
-        <!-- Logo -->
-        <a class="logo" href="index.html">
-          <img src="assets/img/logo.png" alt="Divasma">
-        </a>
-
-        <!-- Sign in/up -->
-        <div class="topbar">
-          <ul class="loginbar pull-right">
-            <li><a href="#">Sign up</a></li>
-            <li class="topbar-devider"></li>
-            <li><a href="#">Sign in</a></li>
-          </ul>
-        </div>
-
-        <!-- Toggle button -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="fa fa-bars"></span>
-        </button>
-      </div>
-
-      <!-- Navbar -->
-      <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+    <div id="wrap">
+      <!-- Header -->
+      <div class="header">
         <div class="container">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Your Books</a>
-            </li>
-            <li>
-              <a href="#">Add a Book</a>
-            </li>
-          </ul>
+          <!-- Logo -->
+          <a class="logo" href="index.html">
+            <img src="assets/img/logo.png" alt="Divasma">
+          </a>
+
+          <!-- Sign in/up -->
+          <div class="topbar">
+            <ul class="loginbar pull-right">
+              <li><a href="#">Sign up</a></li>
+              <li class="topbar-devider"></li>
+              <li><a href="#">Sign in</a></li>
+            </ul>
+          </div>
+
+          <!-- Toggle button -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-bars"></span>
+          </button>
+        </div>
+
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+          <div class="container">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Your Books</a>
+              </li>
+              <li>
+                <a href="#">Add a Book</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- End Header -->
+      <!-- End Header -->
 
-    <div id="notification"></div>
+      <div id="notification"></div>
 
-    <div class="container" id="content">
-      <div class="login-container">
-        <div class="avatar"><img class="avatar" src="assets/img/person.png" alt="Divasma"></div>
-        <div class="login-form-box">
-          <form action="" method="" onsubmit="return validateLogin();">
-            <input name="user" type="text" id="user" placeholder="username">
-            <input type="password" id="password" placeholder="password">
-            <button class="btn btn-info btn-block login" type="submit">Login</button>
-          </form>
+      <div class="container" id="content">
+        <div class="login-container">
+          <div class="avatar"><img class="avatar" src="assets/img/person.png" alt="Divasma"></div>
+          <div class="login-form-box">
+            <form action="" method="" onsubmit="return validateLogin();">
+              <input name="user" type="text" id="user" placeholder="username">
+              <input type="password" id="password" placeholder="password">
+              <button class="btn btn-info btn-block login" type="submit">Login</button>
+            </form>
+          </div>
         </div>
       </div>
+
+      <div id="push"></div>
     </div>
 
     <!-- Footer -->

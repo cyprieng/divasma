@@ -1,13 +1,23 @@
 /*--------------------------------------------------
 		Footer
 ------------------------------------*/
+#wrap{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -65px;
+}
+
+#push{
+	height: 65px;
+}
+
 .footer {
 	background: #222;
 	border-top: none;
 	padding: 10px 0 5px;
 	width: 100%;
-	position: absolute;
-	bottom: 0;
+	height: 65px;
 }
 
 .footer p {
