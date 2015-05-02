@@ -4,6 +4,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 a {
@@ -122,6 +123,40 @@ a:hover {
   .breadcrumbs .breadcrumb {
     top: 0;
     margin-bottom: 10px;
+  }
+}
+
+/*--------------------------------------------------
+		Cover
+------------------------------------*/
+#cover{
+  background: url("../img/cover_back.png");
+  color: white;
+}
+
+#inner-cover{
+  width: 50%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+#cover-img img{
+  height: 230px;
+  margin-right: 20px;
+}
+
+#cover #like{
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+  #cover{
+    height: 250px;
+  }
+
+  #cover-img{
+    float: left;
   }
 }
 
