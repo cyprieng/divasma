@@ -1,3 +1,8 @@
+//Init bootstrap tooltip
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
 /* Show a notification
  *
  * type: type of the notification(danger or success).
