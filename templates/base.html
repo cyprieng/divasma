@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}>Divasma{% endblock %}</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/favicon/apple-touch-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/favicon/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/favicon/apple-touch-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/favicon/apple-touch-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/favicon/apple-touch-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/favicon/apple-touch-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/favicon/apple-touch-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon/favicon-32x32.png' %}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon/android-chrome-192x192.png' %}" sizes="192x192">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon/favicon-96x96.png' %}" sizes="96x96">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon/favicon-16x16.png' %}" sizes="16x16">
+    <link rel="manifest" href="{% static 'img/favicon/manifest.json' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.ico' %}">
+    <meta name="apple-mobile-web-app-title" content="Divasma">
+    <meta name="application-name" content="Divasma">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-TileImage" content="{% static 'img/favicon/mstile-144x144.png' %}">
+    <meta name="msapplication-config" content="{% static 'img/favicon/browserconfig.xml' %}">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- Header -->
+      <div class="header">
+        <div class="container">
+          <!-- Logo -->
+          <a class="logo" href="index.html">
+            <img class="logo_big" src="{% static 'img/logo.png' %}" alt="Divasma">
+            <img class="logo_small" src="{% static 'img/logo_small.png' %}" alt="Divasma">
+          </a>
+
+          <!-- Sign in/up -->
+          <div class="topbar">
+            <ul class="loginbar pull-right">
+              <li><a href="#">Sign up</a></li>
+              <li class="topbar-devider"></li>
+              <li><a href="#">Sign in</a></li>
+            </ul>
+          </div>
+
+          <!-- Toggle button -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-bars"></span>
+          </button>
+        </div>
+
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+          <div class="container">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Your Books</a>
+              </li>
+              <li>
+                <a href="#">Add a Book</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Header -->
+
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+          <div class="container">
+              <h1 class="pull-left">Dune</h1>
+              <ul class="pull-right breadcrumb">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="authors.html">Books</a></li>
+                  <li class="active">Dune</li>
+              </ul>
+          </div>
+      </div>
+      <!-- End Breadcrumbs -->
+
+      <div id="notification"></div>
+
+      {% block content %}{% endblock %}
+
+      <div id="push"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <p>
+              2015 &copy; All Rights Reserved.
+              <a href="#">About</a> | <a href="#">Contribute</a>
+            </p>
+          </div>
+
+          <!-- Social Links -->
+          <div class="col-xs-6">
+            <ul class="footer-socials list-inline">
+              <li>
+                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Github">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- End Social Links -->
+        </div>
+      </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/divasma.js' %}"></script>
+    <script src="{% static 'js/form_validator.js' %}"></script>
+  </body>
+</html>
