@@ -1,13 +1,21 @@
 {% extends "base.html" %}
-{% block title %}{{ book_name }}{% endblock %}
+{% block title %}{{ book.title }}{% endblock %}
+{% block breadcrumbs %}
+  <h1 class="pull-left">{{ book.title }}</h1>
+  <ul class="pull-right breadcrumb">
+      <li><a href="">Home</a></li>
+      <li><a href="">Books</a></li>
+      <li class="active">{{ book.title }}</li>
+  </ul>
+{% endblock %}
 {% block content %}
   <!-- Cover -->
   <div id="cover">
     <div id="inner-cover">
-      <p id="cover-img"><img class="img-thumbnail" src="data:image/jpeg;base64,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"></p>
+      <p id="cover-img"><img class="img-thumbnail" src="{{ book.image }}"></p>
       <div id="cover-content">
-        <h2 class="hidden-xs hidden-sm">Dune</h2>
-        <h3 class="hidden-xs hidden-sm">Frank Herbert</h3>
+        <h2 class="hidden-xs hidden-sm">{{ book.title }}</h2>
+        <h3 class="hidden-xs hidden-sm">{{ book.author }}</h3>
         <div class="rating">
           <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
         </div>
@@ -45,93 +53,144 @@
   <div class="container" id="content">
     <div id="infobox" class="col-md-4 col-md-push-8">
       <div class="panel panel-default">
-        <div class="panel-heading">Dune</div>
+        <div class="panel-heading">{{ book.title }}</div>
         <div class="panel-body">
           <table>
             <tr>
               <td><strong>Auteur</strong></td>
-              <td>Frank Herbert</td>
+              <td>{{ book.author }}</td>
             </tr>
             <tr>
               <td><strong>Genre</strong></td>
-              <td>Roman Science-fiction</td>
+              <td>
+                {% for g in book.genre.all %}
+                  {{ g.name }}{% if not forloop.last %},{% endif %}
+                {% endfor %}
+              </td>
             </tr>
           </table>
           <hr/>
-          <table>
-            <tr>
-              <td class="text-center" colspan="2"><strong>Version originale</strong></td>
-            </tr>
-            <tr>
-              <td><strong>Titre original</strong></td>
-              <td>Dune</td>
-            </tr>
-            <tr>
-              <td><strong>Éditeur original</strong></td>
-              <td>Chilton Books</td>
-            </tr>
-            <tr>
-              <td><strong>Langue originale</strong></td>
-              <td>Anglais américain</td>
-            </tr>
-            <tr>
-              <td><strong>Pays d'origine</strong></td>
-              <td>États-Unis</td>
-            </tr>
-            <tr>
-              <td><strong>Lieu de parution original</strong></td>
-              <td>Philadelphie</td>
-            </tr>
-            <tr>
-              <td><strong>Date de parution originale</strong></td>
-              <td>1965</td>
-            </tr>
-          </table>
-          <hr/>
-          <table>
-            <tr>
-              <td class="text-center" colspan="2"><strong>Version française</strong></td>
-            </tr>
-            <tr>
-              <td><strong>Traducteur</strong></td>
-              <td>Michel Demuth</td>
-            </tr>
-            <tr>
-              <td><strong>Lieu de parution</strong></td>
-              <td>Paris</td>
-            </tr>
-            <tr>
-              <td><strong>Éditeur</strong></td>
-              <td>Robert Laffont</td>
-            </tr>
-            <tr>
-              <td><strong>Collection</strong></td>
-              <td>Ailleurs et Demain</td>
-            </tr>
-            <tr>
-              <td><strong>Date de parution</strong></td>
-              <td>1970</td>
-            </tr>
-            <tr>
-              <td><strong>Type de média</strong></td>
-              <td>Livre papier</td>
-            </tr>
-            <tr>
-              <td><strong>ISBN</strong></td>
-              <td>2-221-02602-0</td>
-            </tr>
-            <tr>
-              <td><strong>Série</strong></td>
-              <td>Cycle de Dune</td>
-            </tr>
-          </table>
+          {% if book.translation_name %}
+            <table>
+              <tr>
+                <td class="text-center" colspan="2"><strong>Version originale</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Titre original</strong></td>
+                <td>{{ book.title }}</td>
+              </tr>
+              <tr>
+                <td><strong>Éditeur original</strong></td>
+                <td>{{ book.publisher }}</td>
+              </tr>
+              <tr>
+                <td><strong>Langue originale</strong></td>
+                <td>{{ book.language }}</td>
+              </tr>
+              <tr>
+                <td><strong>Pays d'origine</strong></td>
+                <td>{{ book.country }}</td>
+              </tr>
+              <tr>
+                <td><strong>Lieu de parution original</strong></td>
+                <td>{{ book.place_published }}</td>
+              </tr>
+              {% if book.collection %}
+                <tr>
+                  <td><strong>Collection</strong></td>
+                  <td>{{ book.collection }}</td>
+                </tr>
+              {% endif %}
+              <tr>
+                <td><strong>Date de parution originale</strong></td>
+                <td>{{ book.date }}</td>
+              </tr>
+            </table>
+            <hr/>
+            <table>
+              <tr>
+                <td class="text-center" colspan="2"><strong>Version française</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Traducteur</strong></td>
+                <td>{{ book.translation_name }}</td>
+              </tr>
+              <tr>
+                <td><strong>Lieu de parution</strong></td>
+                <td>{{ book.translation_place_publisher }}</td>
+              </tr>
+              <tr>
+                <td><strong>Éditeur</strong></td>
+                <td>{{ book.publisher }}</td>
+              </tr>
+              {% if book.collection %}
+                <tr>
+                  <td><strong>Collection</strong></td>
+                  <td>{{ book.translation_collection }}</td>
+                </tr>
+              {% endif %}
+              <tr>
+                <td><strong>Date de parution</strong></td>
+                <td>{{ book.translation_date }}</td>
+              </tr>
+              <tr>
+                <td><strong>ISBN</strong></td>
+                <td>{{ book.isbn }}</td>
+              </tr>
+              {% if book.series %}
+                <tr>
+                  <td><strong>Série</strong></td>
+                  <td>{{ book.series }}</td>
+                </tr>
+              {% endif %}
+            </table>
+          {% else %}
+            <table>
+              <tr>
+                <td><strong>Éditeur</strong></td>
+                <td>{{ book.publisher }}</td>
+              </tr>
+              <tr>
+                <td><strong>Langue</strong></td>
+                <td>{{ book.language }}</td>
+              </tr>
+              <tr>
+                <td><strong>Pays d'origine</strong></td>
+                <td>{{ book.country }}</td>
+              </tr>
+              <tr>
+                <td><strong>Lieu de parution</strong></td>
+                <td>{{ book.place_published }}</td>
+              </tr>
+              {% if book.collection %}
+                <tr>
+                  <td><strong>Collection</strong></td>
+                  <td>{{ book.collection }}</td>
+                </tr>
+              {% endif %}
+              <tr>
+                <td><strong>Date de parution</strong></td>
+                <td>{{ book.date }}</td>
+              </tr>
+              <tr>
+                <td><strong>ISBN</strong></td>
+                <td>{{ book.isbn }}</td>
+              </tr>
+              {% if book.series %}
+                <tr>
+                  <td><strong>Série</strong></td>
+                  <td>{{ book.series }}</td>
+                </tr>
+              {% endif %}
+            </table>
+          {% endif %}
         </div>
       </div>
     </div>
 
     <div class="col-md-8 col-md-pull-4">
       <h2>Résumé</h2>
-      <p>L’histoire débute en l’an 10191 après la création de la Guilde spatiale. L’empereur Shaddam IV exerce son pouvoir féodal sur tout l’univers connu. L’humanité a conquis une grande étendue de l’univers, notamment grâce à une mystérieuse substance dénommée « Épice » ou « Mélange ». L’Épice constitue un puissant stimulant cérébral et permet à certains humains de décupler leurs capacités psychiques. De plus, elle accroît considérablement la durée de vie et immunise le corps contre de nombreuses maladies. Son origine précise est un mystère et les quantités disponibles sont rarissimes ; elle est par ailleurs impossible à synthétiser. L'ensemble de ces paramètres lui confère une valeur monétaire particulièrement élevée.</p>
+      <p>{{ book.synopsis }}</p>
 
       <h2>Critiques</h2>
 
@@ -145,32 +204,6 @@
           <button type="submit" class="btn btn-success green"><i class="fa fa-send"></i> Poster</button>
         </div>
       </form>
-
-      <div class="comment panel panel-default">
-        <p class="author">
-          <span class="avatar_rate"><img src="https://pbs.twimg.com/profile_images/1177544673/avatar_400x400.png"/><span class="rate">7</span></span>
-          <a href="#">cyprieng</a> - 02/05/2015
-        </p>
-        <h3>Génial !</h3>
-        Il n'y a pas, dans tout l'Empire, de planète plus inhospitalière que Dune. Partout des sables à perte de vue. Une seule richesse : l'épice de longue vie, née du désert, et que tout l'univers achète à n'importe quel prix. Richesse très convoitée : quand Leto Atréides reçoit Dune en fief, il flaire le piège. Il aura besoin des guerriers Fremen qui, réfugiés au fond du désert, se sont adaptés à une vie très dure en préservant leur liberté, leurs coutumes et leur foi mystique. Ils rêvent du prophète qui proclamera la guerre sainte et qui, à la tête des commandos de la mort, changera le cours de l'histoire. Cependant les Révérendes Mères du Bene Gesserit poursuivent leur programme millénaire de sélection génétique ; elles veulent créer un homme qui concrétisera tous les dons latents de l'espèce. Tout est fécond dans ce royaume, y compris ses défaillances. Le Messie des Fremen est-il déjà né dans l'Empire ?
-      </div>
-
-      <div class="comment answer panel panel-default">
-        <p class="author">
-          <span class="avatar_rate"><img src="https://pbs.twimg.com/profile_images/1177544673/avatar_400x400.png"/><span class="rate">7</span></span>
-          <a href="#">cyprieng</a> - 02/05/2015
-        </p>
-        Tuot à fait d'accord
-      </div>
-
-      <div class="comment panel panel-default">
-        <p class="author">
-          <span class="avatar_rate"><img src="https://pbs.twimg.com/profile_images/1177544673/avatar_400x400.png"/><span class="rate">7</span></span>
-          <a href="#">cyprieng</a> - 02/05/2015
-        </p>
-        <h3>Génial !</h3>
-        Il n'y a pas, dans tout l'Empire, de planète plus inhospitalière que Dune. Partout des sables à perte de vue. Une seule richesse : l'épice de longue vie, née du désert, et que tout l'univers achète à n'importe quel prix. Richesse très convoitée : quand Leto Atréides reçoit Dune en fief, il flaire le piège. Il aura besoin des guerriers Fremen qui, réfugiés au fond du désert, se sont adaptés à une vie très dure en préservant leur liberté, leurs coutumes et leur foi mystique. Ils rêvent du prophète qui proclamera la guerre sainte et qui, à la tête des commandos de la mort, changera le cours de l'histoire. Cependant les Révérendes Mères du Bene Gesserit poursuivent leur programme millénaire de sélection génétique ; elles veulent créer un homme qui concrétisera tous les dons latents de l'espèce. Tout est fécond dans ce royaume, y compris ses défaillances. Le Messie des Fremen est-il déjà né dans l'Empire ?
-      </div>
     </div>
   </div>
 {% endblock %}

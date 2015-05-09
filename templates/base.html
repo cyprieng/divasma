@@ -87,14 +87,9 @@
 
       <!-- Breadcrumbs -->
       <div class="breadcrumbs">
-          <div class="container">
-              <h1 class="pull-left">Dune</h1>
-              <ul class="pull-right breadcrumb">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="authors.html">Books</a></li>
-                  <li class="active">Dune</li>
-              </ul>
-          </div>
+        <div class="container">
+          {% block breadcrumbs %}{% endblock %}
+        </div>
       </div>
       <!-- End Breadcrumbs -->
 
