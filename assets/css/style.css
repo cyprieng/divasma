@@ -428,10 +428,36 @@ a:hover {
 }
 
 #data_book .image-group{
-  max-width: 300px;
+  max-width: 200px;
+  margin-right: 20px;
+  float: left;
 }
 
 #data_book #image{
-  height: 230px;
-  min-width: 200px;
+  max-height: 230px;
+  margin-bottom: 0;
+}
+
+#data_book input,
+#data_book select,
+#data_book textarea{
+  max-width: 500px;
+}
+
+#data_book .bootstrap-tagsinput{
+  width: 720px;
+}
+
+#data_book .bottom{
+  clear: both;
+}
+
+#data_book .bottom input,
+#data_book .bottom select,
+#data_book .bottom textarea{
+  max-width: 720px;
+}
+
+#data_book .translation_data{
+  display: none;
 }
